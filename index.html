@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comandos de Git y GitHub</title>
-    <script src="./index.js"></script>
-    <link href="./index.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Comando Git</h1>
+    <header>
+        <div class="container">
+            <h1><i class="fab fa-git-alt"></i> Comandos de Git y GitHub</h1>
+            <p>Referencia rápida de los comandos más utilizados</p>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Buscar comandos...">
+            <button id="searchBtn"><i class="fas fa-search"></i> Buscar</button>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="basic">Básicos</button>
+                <button class="filter-btn" data-category="branch">Ramas</button>
+                <button class="filter-btn" data-category="remote">Remotos</button>
+                <button class="filter-btn" data-category="github">GitHub</button>
+            </div>
+        </div>
+
+        <div class="commands-container" id="commandsContainer">
+            <!-- Los comandos se cargarán aquí mediante JavaScript -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Referencia de Comandos Git/GitHub | Creado con ❤️ para desarrolladores</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
